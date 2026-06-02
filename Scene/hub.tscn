@@ -7,3 +7,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1113806518]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -64.0
+offset_right = 198.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1146886843]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -20.0
+offset_right = 158.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="exploreLabel" type="Label" parent="HBoxContainer" unique_id=1141188197]
+layout_mode = 2
+text = "Explore"
+
+[node name="restLabel" type="Label" parent="HBoxContainer" unique_id=999302033]
+layout_mode = 2
+text = "Rest"
+
+[node name="craftLabel" type="Label" parent="HBoxContainer" unique_id=2063637154]
+layout_mode = 2
+text = "Craft"
+
+[node name="quitLabel" type="Label" parent="HBoxContainer" unique_id=2049871856]
+layout_mode = 2
+text = "Quit"

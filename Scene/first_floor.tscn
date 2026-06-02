@@ -7,3 +7,44 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1294325950]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -56.0
+offset_right = 188.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1420211979]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -20.0
+offset_right = 150.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="fightLabel" type="Label" parent="HBoxContainer" unique_id=527902723]
+layout_mode = 2
+text = "Fight"
+
+[node name="forageLabel" type="Label" parent="HBoxContainer" unique_id=459535444]
+layout_mode = 2
+text = "Forage"
+
+[node name="returnLabel" type="Label" parent="HBoxContainer" unique_id=797949256]
+layout_mode = 2
+text = "Return to hub"
