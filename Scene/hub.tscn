@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmeds22nslkya"]
 
-[ext_resource type="Script" uid="uid://b5ylhyiqwvdfn" path="res://Scene/hub.gd" id="1_pv6x1"]
+[ext_resource type="Script" uid="uid://b5ylhyiqwvdfn" path="res://Scripts/hub.gd" id="1_pv6x1"]
 
 [node name="Hub" type="Control" unique_id=320127448]
 layout_mode = 3

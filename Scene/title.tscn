@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cujofxtepup7t"]
 
-[ext_resource type="Script" uid="uid://brf0o7gp1jdrm" path="res://Scene/title.gd" id="1_h6y6f"]
+[ext_resource type="Script" uid="uid://brf0o7gp1jdrm" path="res://Scripts/title.gd" id="1_h6y6f"]
 
 [node name="Title" type="Control" unique_id=861238068]
 layout_mode = 3
@@ -45,6 +45,6 @@ offset_bottom = 507.86002
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1650102027]
 layout_mode = 2
-text = "> Play <"
+text = "> Press Enter <"
 horizontal_alignment = 1
 vertical_alignment = 1
