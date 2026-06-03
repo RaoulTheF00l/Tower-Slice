@@ -16,8 +16,8 @@ var selected_index := 0
 func _ready() -> void:
 	labels = [
 		explore_label,
-		craft_label,
 		rest_label,
+		craft_label,
 		quit_label
 	]
 	
@@ -25,7 +25,19 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	pass
+	if event.is_action_pressed("ui_right"):
+		selected_index += 1
+	if selected_index >= options.size():
+		selected_index = 0
+	
+	_update_menu()
+	
+	
+	if event.is_action_pressed("ui_left"):
+		selected_index -= 1
+	if selected_index < 0:
+		selected_index = options.size() - 1
+	_update_menu()
 
 
 func _update_menu() -> void:
