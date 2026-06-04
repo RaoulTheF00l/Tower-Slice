@@ -4,6 +4,7 @@ extends Control
 @onready var rest_label: Label = $HBoxContainer/restLabel
 @onready var craft_label: Label = $HBoxContainer/craftLabel
 @onready var quit_label: Label = $HBoxContainer/quitLabel
+@onready var message_label: RichTextLabel = $MessagePanel/VBoxContainer/MessageLabel
 
 var labels: Array[Label] = []
 var options := ["Explore", "Rest", "Craft", "Quit"]
@@ -53,13 +54,13 @@ func _select_option() -> void:
 		get_tree().change_scene_to_file("res://Scene/first_floor.tscn")
 
 	elif selected_option == "Rest":
-		print("You rested. Nothing happens yet.")
+		message_label.text = "You rested. Nothing happens yet."
 
 	elif selected_option == "Craft":
 		if Gamestate.craft_dagger():
-			print("You crafted the D-Rank Dagger! Prototype complete!")
+			message_label.text = "You crafted the D-Rank Dagger! Prototype complete!"
 		else:
-			print("You need 1 Fang, 1 Silk, and 2 Wood.")
+			message_label.text = "You need 1 Fang, 1 Silk and 2 Wood to craft a D-Rank Dagger."
 
 	elif selected_option == "Quit":
 		get_tree().quit()
