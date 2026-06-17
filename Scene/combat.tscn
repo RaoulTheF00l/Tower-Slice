@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cix7kge4gokqj"]
+
+[node name="Combat" type="Control" unique_id=242215240]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnemyPanel" type="Panel" parent="." unique_id=1804277974]
+layout_mode = 0
+offset_right = 226.0
+offset_bottom = 320.0
+
+[node name="EnemyLabel" type="Label" parent="EnemyPanel" unique_id=1138426913]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -11.5
+offset_right = 86.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "ENEMY PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerPanel" type="Panel" parent="." unique_id=1396181586]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -391.0
+offset_bottom = 172.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="PlayerPanel" unique_id=422213411]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -35.5
+offset_right = 84.0
+offset_bottom = 35.5
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="PlayerHPLabel" type="Label" parent="PlayerPanel/HBoxContainer" unique_id=1347715335]
+layout_mode = 2
+text = "PLAYER HP"
+
+[node name="EnemyHPLabel" type="Label" parent="PlayerPanel/HBoxContainer" unique_id=1151524756]
+layout_mode = 2
+text = "ENEMY HP"
+
+[node name="MessagePanel" type="Panel" parent="." unique_id=732660448]
+layout_mode = 0
+offset_left = 332.0
+offset_top = 517.0
+offset_right = 823.0
+offset_bottom = 600.0
+
+[node name="MessageLabel" type="Label" parent="MessagePanel" unique_id=536777331]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -11.5
+offset_right = 111.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "COMBAT LOG PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CommandPanel" type="Panel" parent="." unique_id=1475393011]
+custom_minimum_size = Vector2(500, 35)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -35.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CommandPanel" unique_id=1076560496]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -20.0
+offset_right = 83.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 145
+
+[node name="AttackLabel" type="Label" parent="CommandPanel/HBoxContainer" unique_id=1156924575]
+layout_mode = 2
+text = "ATTACK"
+
+[node name="DefendLabel" type="Label" parent="CommandPanel/HBoxContainer" unique_id=1759300133]
+layout_mode = 2
+text = "DEFEND"
+
+[node name="RunLabel" type="Label" parent="CommandPanel/HBoxContainer" unique_id=2027242615]
+layout_mode = 2
+text = "RUN"
