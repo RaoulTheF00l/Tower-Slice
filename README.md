@@ -26,3 +26,28 @@ Start in Town
 → Return to Town
 → Craft Gear
 → Progress Further
+```
+
+# Tower Progression Slice v0.0.1 PRE-RELEASE
+
+A small playable Godot prototype demonstrating a complete tower progression loop.
+
+## Current Gameplay Loop
+
+- Start at the title screen
+- Enter the hub
+- Explore Floor 1
+- Fight a goblin
+- Forage materials
+- Return to the hub
+- Craft a D-Rank Dagger
+- Receive the demo completion message
+
+
+## Current Limitations
+
+- Combat is currently a placeholder interaction
+- No save/load system
+- No real inventory UI yet
+- No production art or audio yet
+- Not production ready
