@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cix7kge4gokqj"]
 
+[ext_resource type="Script" uid="uid://bfid1s5cxufof" path="res://Scene/combat.gd" id="1_6nktc"]
+
 [node name="Combat" type="Control" unique_id=242215240]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6nktc")
 
 [node name="EnemyPanel" type="Panel" parent="." unique_id=1804277974]
 layout_mode = 0
