@@ -95,9 +95,28 @@ func _select_command() -> void:
 
 func _player_attack() -> void:
 	enemy_hp -= player_attack_damage
-	
+
 	if enemy_hp < 0:
 		enemy_hp = 0
-	
-	message_label.text = "You attack the " + enemy_name + " for " + str(player_attack_damage) + " damage."
+
+	message_label.text = "You attack the goblin for " + str(player_attack_damage) + " damage."
 	_update_status()
+
+	if enemy_hp <= 0:
+		message_label.text += "\nThe goblin is defeated!"
+		return
+
+	_enemy_turn()
+
+
+func _enemy_turn() -> void:
+	player_hp -= enemy_attack_damage
+
+	if player_hp < 0:
+		player_hp = 0
+
+	message_label.text += "\nThe goblin hits you for " + str(enemy_attack_damage) + " damage."
+	_update_status()
+
+	if player_hp <= 0:
+		message_label.text += "\nYou were defeated..."
