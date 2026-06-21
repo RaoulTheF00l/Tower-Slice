@@ -14,11 +14,13 @@ extends Control
 
 var player_maxHp := 30
 var player_hp := 30
+var player_attack_damage := 8
 
 
 var enemy_name := "Goblin"
 var enemy_max_hp := 20
 var enemy_hp := 20
+var enemy_attack_damage := 5
 
 
 var command_labels: Array[Label] = []
@@ -62,7 +64,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			selected_command_index = command_names.size() - 1
 
 		_update_command_menu()
-
+	
+	if event.is_action_pressed("ui_accept"):
+		_select_command()
 
 
 func _update_status() -> void:
@@ -76,3 +80,24 @@ func _update_command_menu() -> void:
 			command_labels[i].text = "> " + command_names[i] + " <"
 		else:
 			command_labels[i].text = command_names[i]
+
+
+func _select_command() -> void:
+	var selected_command = command_names[selected_command_index]
+	
+	if selected_command == "Attack":
+		_player_attack()
+	elif selected_command == "Defend":
+		message_label.text = "Defend is not built yet."
+	elif selected_command == "Run":
+		message_label.text = "Run is not built yet."
+
+
+func _player_attack() -> void:
+	enemy_hp -= player_attack_damage
+	
+	if enemy_hp < 0:
+		enemy_hp = 0
+	
+	message_label.text = "You attack the " + enemy_name + " for " + str(player_attack_damage) + " damage."
+	_update_status()
