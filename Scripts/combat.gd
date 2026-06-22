@@ -11,6 +11,9 @@ extends Control
 @onready var defend_label: Label = $CommandPanel/HBoxContainer/DefendLabel
 @onready var run_label: Label = $CommandPanel/HBoxContainer/RunLabel
 
+var battle_over := false
+var battle_won := false
+
 
 var player_maxHp := 30
 var player_hp := 30
@@ -49,6 +52,13 @@ func _process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept") and battle_over:
+		get_tree().change_scene_to_file("res://Scene/first_floor.tscn")
+		return
+
+	if battle_over:
+		return
+
 	if event.is_action_pressed("ui_right"):
 		selected_command_index += 1
 
@@ -64,7 +74,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			selected_command_index = command_names.size() - 1
 
 		_update_command_menu()
-	
+
 	if event.is_action_pressed("ui_accept"):
 		_select_command()
 
@@ -103,7 +113,7 @@ func _player_attack() -> void:
 	_update_status()
 
 	if enemy_hp <= 0:
-		message_label.text += "\nThe goblin is defeated!"
+		_win_battle()
 		return
 
 	_enemy_turn()
@@ -120,3 +130,19 @@ func _enemy_turn() -> void:
 
 	if player_hp <= 0:
 		message_label.text += "\nYou were defeated..."
+
+
+func _win_battle() -> void:
+	battle_over = true
+	battle_won = true
+	
+	Gamestate.fang += 1
+	Gamestate.fought_floor_1 = true
+	
+	message_label.text += "\nThe golbin is defeated!"
+	message_label.text += "\nYou found 1 Fang!"
+	message_label.text += "\nPress confirm to return to Floor 1."
+
+
+func _lose_battle() -> void:
+	pass

@@ -67,6 +67,8 @@ func _fight_enemy() -> void:
 		message_label.text = "The goblin is already defeated."
 		return
 
+	get_tree().change_scene_to_file("res://Scene/combat.tscn")
+
 	Gamestate.fang += 1
 	Gamestate.fought_floor_1 = true
 	message_label.text = "You fought a goblin and won!\nYou found 1 Fang."
